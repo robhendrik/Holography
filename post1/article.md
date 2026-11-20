@@ -23,7 +23,7 @@ Suggested excerpt: Light has no invariant mass, yet a box containing light is ha
 -->
 
 # Light Is Heavy
-## Why light in an accelerating cavity pushes harder on the lower mirror — and why classical electromagnetism already knows the answer
+## Why light in an accelerating cavity pushes harder on the lower mirror, and why classical electromagnetism already knows the answer
 
 ![Feature image](post1_feature_modepattern.png)
 > Caption: A standing wave in an accelerating cavity, compressed toward the bottom. Conceptual illustration, not a computed field map.
@@ -47,8 +47,8 @@ We assume that the box accelerates through otherwise flat spacetime. We use Rind
 The spacetime interval between nearby events is then
 
 $$
-ds^2=-N(x)^2c^2d\tau^2+dx^2,
-\qquad N(x)=1-\frac{ax}{c^2}.
+ds^2=-N(x)^2c^2d\tau^2+dx^2
+\qquad N(x)=1-\frac{ax}{c^2}
 $$
 
 This is still flat spacetime: Rindler coordinates describe accelerated observers, not spacetime curvature. We require the dimensionless quantity ε = *ah*/*c*² to be less than one. This keeps both mirrors within the same Rindler region, where light can travel between them.
@@ -58,8 +58,8 @@ This is still flat spacetime: Rindler coordinates describe accelerated observers
 The quantity *N*(*x*) tells us how the local clocks compare at different positions in the cavity. During the same interval of top-clock time, a clock at the bottom records slightly less elapsed time.
 
 $$
-d\tau_{\mathrm{bottom}}=(1-\varepsilon)\,d\tau_{\mathrm{top}},
-\qquad \varepsilon\equiv\frac{ah}{c^2}.
+d\tau_{\mathrm{bottom}}=(1-\varepsilon)\,d\tau_{\mathrm{top}}
+\qquad \varepsilon\equiv\frac{ah}{c^2}
 $$
 
 The proper acceleration at position *x* is *a*/*N*(*x*), so the lower mirror accelerates slightly more strongly.
@@ -73,13 +73,13 @@ Now imagine a photon bouncing up and down between the mirrors. Each impact cause
 A light ray has *ds*² = 0, so its travel time over a small distance *dx*, measured by the top clock, obeys
 
 $$
-d\tau=\frac{|dx|}{cN(x)}.
+d\tau=\frac{|dx|}{cN(x)}
 $$
 
 Going from top to bottom therefore takes, in top-clock time,
 
 $$
-T=-\frac{c}{a}\ln(1-\varepsilon).
+T=-\frac{c}{a}\ln(1-\varepsilon)
 $$
 
 Because the metric is stationary, the return trip takes the same top-clock time. The photon therefore hits either mirror once every 2*T*, as measured by the top clock.
@@ -89,13 +89,13 @@ Because the metric is stationary, the return trip takes the same top-clock time.
 Let *E*ₜ denote the energy of the photon measured locally at the top mirror. Each reflection reverses its momentum, so the top mirror receives an upward impulse Δ*p*ₜ = 2*E*ₜ/*c*. The photon returns to the top every 2*T*. Thus the average force there is
 
 $$
-F_{\mathrm{top}}^{\mathrm{local}}=\frac{2E_t/c}{2T}=\frac{E_t}{cT}.
+F_{\mathrm{top}}^{\mathrm{local}}=\frac{2E_t/c}{2T}=\frac{E_t}{cT}
 $$
 
 The photon gains locally measured energy as it travels downward. This is the accelerating-frame version of gravitational blueshift. The energy read by a nearby observer at position *x* is
 
 $$
-E_{\mathrm{local}}(x)=\frac{E_t}{N(x)}.
+E_{\mathrm{local}}(x)=\frac{E_t}{N(x)}
 $$
 
 At the bottom mirror this is *E*ₜ/(1 − ε).
@@ -106,7 +106,7 @@ Second, the bottom clock runs more slowly. The same series of bounces arrives at
 
 $$
 \frac{F_{\mathrm{bottom}}^{\mathrm{local}}}{F_{\mathrm{top}}^{\mathrm{local}}}
-=\frac{1}{(1-\varepsilon)^2}.
+=\frac{1}{(1-\varepsilon)^2}
 $$
 
 So a local observer attached to the bottom mirror registers a larger force.
@@ -116,7 +116,7 @@ It might seem natural to subtract the two local force readings. But they are mad
 That gives the third factor. Suppose the cavity is supported at its top. A stationary mechanical connection transmits the lower force upward with a factor 1 − ε [3]. The bottom force must therefore be multiplied by 1 − ε before we compare it with the top force.
 
 $$
-\frac{F_{\mathrm{bottom}}^{\mathrm{top\ referred}}}{F_{\mathrm{top}}^{\mathrm{local}}}=\frac{1}{1-\varepsilon}.
+\frac{F_{\mathrm{bottom}}^{\mathrm{top\ referred}}}{F_{\mathrm{top}}^{\mathrm{local}}}=\frac{1}{1-\varepsilon}
 $$
 
 A single support at the top does not simply subtract readings made with two different clocks. Figure 2 keeps the three factors separate.
@@ -131,31 +131,31 @@ $$
 F_{\mathrm{light}}
 =\frac{2E_t/c}{2T}
 -\frac{2E_t/[c(1-\varepsilon)]}{2T}
-=-\frac{E_t}{cT}\frac{\varepsilon}{1-\varepsilon}.
+=-\frac{E_t}{cT}\frac{\varepsilon}{1-\varepsilon}
 $$
 
 For a cavity small compared with *c*²/*a*, we have ε ≪ 1 and *T* ≈ *h*/*c*. Therefore
 
 $$
-F_{\mathrm{light}}\simeq-\frac{E_t a}{c^2}.
+F_{\mathrm{light}}\simeq-\frac{E_t a}{c^2}
 $$
 
 The extra force needed to accelerate the box has magnitude *m* *a*, where *m* is the light's contribution to the box's inertia. To leading order, we recover Einstein's famous formula:
 
 $$
-m_{\mathrm{light}}=\frac{E_t}{c^2}.
+m_{\mathrm{light}}=\frac{E_t}{c^2}
 $$
 
 The only approximation here is using *E*ₜ for the light's energy. We can remove it. The photon spends a top-clock time *dx*/(*cN*) in each slice *dx*, out of *T* per one-way trip, and there carries local energy *E*ₜ/*N*. Its time-averaged, locally measured energy is therefore
 
 $$
 \langle E\rangle=\int_0^h\frac{E_t}{N(x)}\,\frac{dx}{cN(x)\,T}
-=\frac{E_t}{cT}\,\frac{c^2}{a}\,\frac{\varepsilon}{1-\varepsilon},
+=\frac{E_t}{cT}\,\frac{c^2}{a}\,\frac{\varepsilon}{1-\varepsilon}
 $$
 
 and the exact force we found above is simply −*a*⟨*E*⟩/*c*². Notice the weighting: one factor 1/*N* from the blueshift and one from the time the photon lingers lower down, so the photon's average energy is distributed as 1/*N*². We will meet that profile again. This shows why confined light adds energy divided by *c*² to the inertia of the complete box, as Van der Mark and 't Hooft explained [1].
 
-The walls also carry mechanical stress, which matters for the inertia of the closed box-and-light system [4,5]. Once we treat that complete system consistently, its additional mass is the added energy divided by *c*².
+The walls also carry mechanical stress, which matters for the inertia of the closed box-and-light system [4]. Once we treat that complete system consistently, its additional mass is the added energy divided by *c*².
 
 ## Now Remove the Photon
 
@@ -167,14 +167,14 @@ The trick is to measure distances by the time light takes to cross them. Define 
 
 $$
 \xi(x)=\int_0^x\frac{dx'}{N(x')}
-=-\frac{c^2}{a}\ln N(x).
+=-\frac{c^2}{a}\ln N(x)
 $$
 
 Written in the physical distance *x*, Maxwell's equation for a wave travelling straight up and down picks up extra factors of *N*. Written in ξ and τ, it becomes the ordinary one-dimensional wave equation again. A standing-wave solution for the transverse vector potential *A* (pointing horizontally, along the mirrors) is simply
 
 $$
-A(x,\tau)=A_0\sin\!\big[k\xi(x)\big]\cos(\omega\tau),
-\qquad \omega=ck.
+A(x,\tau)=A_0\sin\!\big[k\xi(x)\big]\cos(\omega\tau)
+\qquad \omega=ck
 $$
 
 We choose the wave number so that *k*ξ(*h*) is an integer multiple of π, placing nodes at both mirrors. There is nothing unusual about a sine wave in optical distance. What looks unusual is that, when we draw it against the ruler distance *x*, the wave is skewed. Because one unit of physical distance corresponds to progressively more optical distance toward the bottom, successive nodes become closer together in physical space. The wave is squeezed toward the bottom.
@@ -189,7 +189,7 @@ Taking the spatial derivative introduces a factor 1/*N*(*x*) into the magnetic f
 
 $$
 \frac{F_{\mathrm{bottom}}^{\mathrm{local}}}{F_{\mathrm{top}}^{\mathrm{local}}}
-=\frac{1}{(1-\varepsilon)^2}.
+=\frac{1}{(1-\varepsilon)^2}
 $$
 
 That is precisely the local force ratio we obtained from the bouncing-photon argument. The classical wave pushes harder on the lower mirror, without any photon assumption.
@@ -197,7 +197,7 @@ That is precisely the local force ratio we obtained from the bouncing-photon arg
 To find out whether the wave also contributes the same inertia, however, we need its total electromagnetic energy. What would a small detector travelling with the box measure? We have written the sine wave for the vector potential *A*, not directly for its electric field. The local electric field is the time derivative of that potential, measured using the local clock:
 
 $$
-E=-\frac{1}{N(x)}\frac{\partial A}{\partial\tau}.
+E=-\frac{1}{N(x)}\frac{\partial A}{\partial\tau}
 $$
 
 That gives one factor 1/*N* in the electric-field amplitude. The magnetic field *B* = ∂*A*/∂*x* carries the factor 1/*N* we met above, because ξ changes faster than *x* at the bottom. The envelopes of both electric and magnetic field amplitudes therefore grow like 1/*N* as we go down.
@@ -207,8 +207,8 @@ Energy density depends on the square of the electric and magnetic fields. During
 We obtain
 
 $$
-\overline u(x)=\frac{u_0}{N(x)^2},
-\qquad u_0=\frac{A_0^2\omega^2}{4\mu_0c^2}.
+\overline u(x)=\frac{u_0}{N(x)^2}
+\qquad u_0=\frac{A_0^2\omega^2}{4\mu_0c^2}
 $$
 
 The time-averaged energy density is therefore not a squared sine wave. It is a smooth curve, increasing toward the lower mirror — the same 1/*N*² profile we found for the bouncing photon. The sine sets the nodes; the local clock and spatial derivatives give the field amplitudes their rising envelope.
@@ -218,7 +218,7 @@ We have discovered two consequences of acceleration in the same classical electr
 The pressure comparison now becomes the final test. At either perfectly conducting mirror, the cycle-averaged magnetic pressure equals the local electromagnetic energy density. Because that density grows toward the bottom, the lower mirror feels a stronger force. We refer that lower force to the top support by multiplying it by 1 − ε, and then subtract the two mirror contributions. The difference is exactly the total locally measured field energy multiplied by −*a*/*c*²:
 
 $$
-F_{\mathrm{light}}=-\frac{aE_{\mathrm{em}}}{c^2},\qquad E_{\mathrm{em}}=\int_0^h \overline{u}(x)\,S\,dx.
+F_{\mathrm{light}}=-\frac{aE_{\mathrm{em}}}{c^2}\qquad E_{\mathrm{em}}=\int_0^h \overline{u}(x)\,S\,dx
 $$
 
 Here *S* is the mirror area. As with the photon, this equality holds exactly for our stationary, idealized one-dimensional field model, with the force referred to the top support and *E*ₑₘ defined as the integral of locally measured energy density.
@@ -226,7 +226,7 @@ Here *S* is the mirror area. As with the photon, this equality holds exactly for
 We have recovered Einstein's familiar result:
 
 $$
-m_{\mathrm{light}}=\frac{E_{\mathrm{em}}}{c^2}.
+m_{\mathrm{light}}=\frac{E_{\mathrm{em}}}{c^2}
 $$
 
 No photons, no quantization. Just a classical electromagnetic standing wave in an accelerating box.
@@ -250,7 +250,7 @@ Then we replaced the bouncing particle with a standing electromagnetic field. Ma
 
 Quantum theory adds genuinely new questions: how the modes are excited in discrete amounts, how photon-number statistics behave, what it means for a cavity to be in its vacuum state, and how different observers define particles. None of those questions was needed to make the classical field contribute to the box's weight.
 
-We put light in a box to find out how much it weighs. The field already knew the answer.
+> **We put light in a box to find out why it has weight. The answer was already in the electromagnetic field**
 
 But an accelerating observer and an inertial observer do not use the same time coordinate. Their definitions of a positive-frequency mode need not agree. What does each observer mean when they say the cavity is empty? That is where the quantum story begins.
 
@@ -264,6 +264,6 @@ Thank you for reading. Please leave a comment, and don't forget to subscribe.
 
 3. A. Perez and S. Ribisi, Energy-mass equivalence from Maxwell equations, American Journal of Physics 90, 305–313 (2022). https://doi.org/10.1119/10.0009156
 
-4. S. Boughn and T. Rothman, Hasenöhrl and the Equivalence of Mass and Energy, arXiv:1108.2250 (2011). https://arxiv.org/abs/1108.2250
+4. R. Medina, The inertia of stress, American Journal of Physics 74, 1031–1036 (2006). https://doi.org/10.1119/1.2338550
 
-5. R. Medina, The inertia of stress, American Journal of Physics 74, 1031–1036 (2006). https://doi.org/10.1119/1.2338550
+   
