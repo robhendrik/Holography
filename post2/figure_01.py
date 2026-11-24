@@ -1,0 +1,15 @@
+from spacetime import *
+OUT=Path(__file__).parent
+fig,ax=plt.subplots(figsize=(6,6)); ordinary(ax)
+polygon(ax,[(-4,-4),(0,0),(4,-4)],PAST,.30)
+polygon(ax,[(-4,4),(0,0),(4,4)],FUTURE,.32)
+polygon(ax,[(-4,-4),(-4,4),(0,0)],GRAY)
+polygon(ax,[(4,-4),(4,4),(0,0)],GRAY)
+ax.plot([-4,4],[-4,4],color=INK,lw=1.4); ax.plot([-4,4],[4,-4],color=INK,lw=1.4)
+ax.plot([0,0],[-4,4],color=INK,ls='--',lw=1)
+ax.scatter(0,0,color=INK,s=36,zorder=5); ax.annotate('Alice now',(0,0),xytext=(9,7),textcoords='offset points')
+ax.text(0,-2.7,'Can influence\nAlice',ha='center',va='center',color=INK)
+ax.text(0,2.7,'Alice can\ninfluence',ha='center',va='center',color=INK)
+for x in [-2.8,2.8]: ax.text(x,0,'Neither',ha='center',va='center',color=INK)
+ax.text(2.6,3.0,'Light',rotation=45,ha='center',fontsize=11)
+fig.savefig(OUT/f'figure_01.png',dpi=220,bbox_inches='tight',pad_inches=.18)
