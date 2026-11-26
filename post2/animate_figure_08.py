@@ -66,6 +66,9 @@ for s in np.linspace(0,1,N):
     surf=surface(es); ctr=center(es)
     chi=np.linspace(0,1,150)
     sing1=dust_sing(chi)
+    assert np.all(sing1[:,:2]==0)
+    assert np.allclose(sing1[:,3],0)
+    assert np.allclose(sing1[0],ctr[-1]) and np.allclose(sing1[-1],surf[-1])
     # singularity in vacuum, ending at the same time limit as the PG view
     eend=brentq(lambda e: -2*LU(e)-tmax,-2+1e-14,0) if tmax<55 else -2+1e-13
     sing2=vacuum_sing(np.linspace(0,eend,350))
@@ -83,6 +86,11 @@ def display(data,s,grow):
     scale=.095/(1+.7*(grow-1))
     a=np.column_stack((data[:,0]*scale,data[:,1]*scale-.48))
     return (1-s)*a+s*data[:,2:]
+
+for i, stage in enumerate(stages):
+    sg=stage[2]; f=i/(N-1); z=display(sg,f,stage[-1])
+    assert np.isclose(np.ptp(z[:,0]),f*P(1))
+    assert np.ptp(z[:,1])<1e-12
 
 def draw(index):
     ax.clear(); ax.set(xlim=(-.16,1.04),ylim=(-1.08,.19),aspect='equal'); ax.axis('off')
@@ -113,21 +121,26 @@ def draw(index):
         ax.annotate(str(j+1),z[0],xytext=[(9,-12),(9,-3),(-15,7)][j],textcoords='offset points',weight='bold',color=INK)
         k=len(z)*2//3; ax.annotate('',xy=z[k],xytext=z[k-25],arrowprops=dict(arrowstyle='-|>',color=GOLD,lw=1.2))
     # Labels follow real reference points rather than independently drawn geometry.
-    z=d(surface(np.array([-3.7])))[0]; ax.annotate('Star',z,xytext=(-25,0),textcoords='offset points',ha='right',color=INK)
+    # Place label at an interior dust event, not on the horizon.
+    e_star=-4.0+2.4*min(1.,s*3); chi_star=.42
+    z=d(paired(ts(e_star),chi_star*e_star**2/4,e_star-chi_star,P(e_star+chi_star)))[0]
+    ax.text(*z,'Star',ha='center',va='center',color=INK,fontsize=10)
     z=d(horizon_out(np.array([2.5])))[0]; ax.annotate('Horizon',z,xytext=(10,8),textcoords='offset points',color=INK)
     if final: ax.text(H/2,.035,'Singularity',ha='center',color=INK)
     else:
         z=d(vacuum_sing(np.array([-1.6])))[0]; ax.annotate('Singularity',z,xytext=(-10,8),textcoords='offset points',ha='right',color=INK)
     ax.set_title('Radius and time' if index==0 else 'Penrose diagram' if final else 'Changing coordinates',fontsize=17,pad=10,color=INK)
     if index==0:
-        ax.annotate('Radius, r',xy=(.45,-1.02),ha='center',color=INK)
-        ax.annotate('Time, ct',xy=(-.13,-.45),rotation=90,ha='center',color=INK)
+        ax.annotate('Areal radius, r',xy=(.45,-1.02),ha='center',color=INK)
+        ax.annotate('PG time, ct',xy=(-.13,-.45),rotation=90,ha='center',color=INK)
     ax.text(.5,-.045,'1  Escapes     •     2  Horizon     •     3  Trapped',transform=ax.transAxes,ha='center',fontsize=11,color=INK)
     ax.text(.5,-.085,'Same collapse — different representation',transform=ax.transAxes,ha='center',fontsize=10,color=INK)
 
 if __name__=='__main__':
     order=[0]*12+list(range(N))+[N-1]*22+list(range(N-2,0,-1))
     ani=FuncAnimation(fig,draw,frames=order,interval=90,blit=False)
-    ani.save(OUT/'figure_07_morph.gif',writer=PillowWriter(fps=12))
-    draw(N-1); fig.savefig(OUT/'figure_07_morph_final.png',dpi=150)
+    ani.save(OUT/'figure_08_morph.gif',writer=PillowWriter(fps=12))
+    for k in (0,N//2,N-1):
+        draw(k); fig.savefig(OUT/f'frame_{k:02d}.png',dpi=110)
+    draw(N-1); fig.savefig(OUT/'figure_08_morph_final.png',dpi=150)
     print('Saved GIF and final frame; sampled outgoing null slopes checked.')

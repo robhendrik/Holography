@@ -77,5 +77,5 @@ frames[0].save(OUT/'ordinary.png'); frames[-1].save(OUT/'penrose.png')
 frames[len(frames)//2].save(OUT/'intermediate.png')
 sequence=frames+frames[-2:0:-1]
 durations=[65]*len(sequence); durations[0]=1800; durations[len(frames)-1]=2200
-sequence[0].save(OUT/'penrose_morph.gif',save_all=True,append_images=sequence[1:],duration=durations,loop=0,disposal=2,optimize=True)
+sequence[0].save(OUT/'figure_04_penrose_morph.gif',save_all=True,append_images=sequence[1:],duration=durations,loop=0,disposal=2,optimize=True)
 print('Validated 101 interpolation steps; GIF saved.',len(sequence),'frames')

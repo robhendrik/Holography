@@ -53,7 +53,7 @@ def main():
     e=np.linspace(-3,-2,500); hr=e**2/4*(e+3); ht=ts(e)
     a.plot(hr,ht,color=INK,lw=2); a.plot([1,1],[-2/3,5],color=INK,lw=2)
     a.text(.14,3.1,'Singularity',rotation=90,color=INK,va='center'); a.text(1.14,2.8,'Event horizon',color=INK,rotation=90,va='center')
-    a.text(.35,-3.7,'Star',color=INK); a.set(xlim=(-.12,4.6),ylim=(-5,5),xlabel=r'Physical radius, $r/r_s$',ylabel=r'Infall time, $ct/r_s$',title='(a) Radius and time'); a.set_aspect('equal')
+    a.text(.35,-3.7,'Star',color=INK); a.set(xlim=(-.12,4.6),ylim=(-5,5),xlabel=r'Areal radius, $r/r_s$',ylabel=r'Infall time (PG), $ct/r_s$',title='(a) Radius and time'); a.set_aspect('equal')
     im=(0,-1); i0=((H+1)/2,(H-1)/2); ip=(H,0)
     b.add_patch(Polygon([im,i0,ip,(0,0)],facecolor=BLUE,edgecolor='none'))
     es=-np.geomspace(1e5,1e-9,2400)
@@ -68,7 +68,10 @@ def main():
     b.plot([0,H],[-H,0],color=INK,lw=2)
     b.text(-.035,-.49,'Center (r = 0)',rotation=90,ha='right',va='center'); b.text(.10,-.37,'Star',ha='center')
     b.text(H/2,.045,'Singularity',ha='center'); b.text(.40,-H+.40-.047,'Event horizon',rotation=45,ha='center',va='top',color=INK)
-    b.text(i0[0]+.035,i0[1]-.02,'Light escapes\nto infinity',ha='left',va='center',fontsize=10)
+    escape_edge = ((i0[0]+ip[0])/2, (i0[1]+ip[1])/2)
+    b.annotate('Light escapes\nto infinity', xy=escape_edge, xytext=(i0[0]+.045, i0[1]+.13), ha='left', va='center', fontsize=10, arrowprops=dict(arrowstyle='-', color=INK, lw=1.0))
+    assert np.isclose(sum(escape_edge), H)
+    assert ip[0] < escape_edge[0] < i0[0]
     b.text(H+.025,.035,'Infinite future',ha='left',fontsize=10)
     styles=['-','--','-.']
     for j,re in enumerate([1.6,1.,.72]):
