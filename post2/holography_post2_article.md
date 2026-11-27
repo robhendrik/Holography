@@ -40,14 +40,14 @@ Editorial handoff:
 -->
 
 # Can we see the birth of a black hole?
-## What do we see when we look at a black hole, and what can we never see?
+## Light cannot escape a black hole, so what do we actually see when we look at a one?
 
 ![Feature image](holography_post2_feature.png)
 > Caption: A collapsing star, seen through a Penrose diagram. Image by author.
 > Alt text: Penrose diagram of a collapsing star, showing the event horizon, singularity, and three gold light rays with different destinations.
 > Source: Image by author.
 
-We all know that light cannot escape from a black hole. But what does an observer, Alice, actually see when she looks at one? We are not talking about the light emitted by material surrounding the black hole, but about the star that collapses to form it.
+We all know that light cannot escape from a black hole. But what does an observer, Alice, actually see when she looks at one? We will not talk about the light emitted by material surrounding the black hole, but about the object itself, and the star from which it was formed.
 
 Light emitted from just outside the horizon of a collapsing star takes increasingly long to reach a distant observer as the surface approaches the horizon. Does Alice ever see the moment the stellar surface crosses the horizon, or is she still looking at the star from which the black hole formed?
 
@@ -72,7 +72,7 @@ Figure 1 covers only a finite range of positions and times. Can we extend the di
 
 We want to map infinite distances and times onto a finite diagram while preserving the 45° direction of light rays.
 
-The arctangent does the first part. For a dimensionless variable *s*, we use the normalized form
+We need a function that maps a parameter with infinite range on a finite interval. The arctangent can do this: for a dimensionless variable *s*, we use the normalized form
 
 $$
 f(s)=\frac{2}{\pi}\arctan(s).
@@ -80,7 +80,7 @@ $$
 
 As *s* increases, *f(s)* approaches +1; for increasingly negative values of *s*, it approaches −1 (Figure 2a). Neither limit is reached for any finite *s*.
 
-Applying this function separately to position and time would compress the diagram, but light paths would no longer be straight lines at 45°. Instead, we use two coordinates that are directly related to the paths of light. We define
+Applying this function separately to position and time would compress the diagram, but light paths would no longer be straight lines at 45°. The preserve the direction of the light signal we use two coordinates that are directly related to the paths of light. We define
 
 $$
 u=\frac{ct-x}{L},\qquad v=\frac{ct+x}{L},
@@ -139,7 +139,7 @@ The blue region covers more and more of the diamond. For any event at a finite p
 
 > **There is no region of this universe that is permanently inaccessible to Alice. The events she cannot yet observe simply require more time.**
 
-Now let's go back to the black hole. Is this conclusion still valid?
+Now let's go back to the black hole. Is the conclusion that Alice will in the end be able to ‘see’ all of spacetime still valid?
 
 ## From position to radius
 
@@ -158,15 +158,15 @@ The diamond has become a triangle because *r* cannot be negative. The vertical l
 
 Suppose we put a star in this universe and let it collapse under its own gravity. Our model is a nonrotating, homogeneous sphere of pressureless matter, collapsing from rest at infinity [3]. We use classical general relativity and neglect evaporation.
 
-Figure 7a shows the radius of the stellar surface (the dashed brown line) decreasing with time. In curved spacetime, we have to be careful about what we mean by radius. Rather than measuring the distance from the center, we define *r* such that a spherical surface has an area *A* = 4*πr*². This is called the areal radius.
+Figure 7a shows the radius of the stellar surface (the dashed brown line) decreasing with time. We express the radius in units of the Schwarzschild radius rₛ, which depends on the mass M of the star:
 
-The unit of radius in the figure is the Schwarzschild radius *rₛ*, which depends on the mass *M* of the star and Newton’s gravitational constant *G*:
-
-$$
-r_s=\frac{2GM}{c^2}.
+$$  
+r_s=\frac{2GM}{c^2}.  
 $$
 
-Here *t* is the proper time of observers moving with the collapsing stellar material. Outside the star, it is also the proper time along the trajectories of observers falling radially from rest at infinity. This choice of time coordinate, known as Painlevé–Gullstrand time, remains regular at *r* = *rₛ* [3]. We can therefore draw light signals emitted before, at and after the surface passes this radius.
+Here, G is Newton’s gravitational constant. We use a time coordinate that allows us to follow the collapse through r = rₛ [3].
+
+What happens to light emitted from the stellar surface before, at and after it passes this radius?
 
 In the vacuum outside the stellar material, the radial coordinate velocity of outward-directed light in these coordinates is
 
@@ -217,14 +217,13 @@ So, the longer Alice waits, the closer to the horizon the stellar surface was wh
 
 Does this mean Alice will forever see the collapsing star approaching its horizon? In principle, if the surface continues to emit light up to horizon crossing, light emitted ever closer to the horizon can reach Alice at arbitrarily late times. But this light is increasingly redshifted and faint [2]. Instead of seeing a bright image of the star frozen at the horizon, Alice sees the stellar surface fade below the sensitivity of her detector.
 
-There is a difference between knowing that a black hole has formed and observing the stellar surface cross its horizon. Alice can infer the former from observations outside the horizon and a model of the collapse, but no improvement in her telescope will allow her to see the latter.
+There is a difference between knowing that a black hole has formed and observing the stellar surface cross its horizon. Alice can infer the former from observations outside the horizon and a model of the collapse, but not even a perfect telescope will allow her to actually see it.
 
 **No matter how long Alice waits, she will never see the star cross its horizon.**
 
-Suppose Alice waits another second. How much closer to the horizon was the stellar surface when it emitted the light she now receives?
-
 In the next post, we will see how the relation between emission and reception time connects the geometry of spacetime to the quantum physics of black holes [2].
 
+Leave your comment, and do not forget to subscribe.
 ## References
 
 1. David Tong, *General Relativity* (2019), lecture notes, University of Cambridge. Section 4.4.2 (Penrose diagrams) and Sections 6.1.4–6.1.5 (Kruskal spacetime and black hole formation). https://davidtong.org/teaching/general-relativity/
